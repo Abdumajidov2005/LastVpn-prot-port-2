@@ -49,6 +49,26 @@ ul {
   list-style: none;
 }
 
+.sections-title {
+  width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sections-title h1 {
+  font-size: 30px;
+  font-weight: var(--weight-700);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--darken-color);
+}
+.sections-title p {
+  font-size: 16px;
+  font-weight: var(--main-weight);
+  letter-spacing: 1px;
+  color: var(--main-word-color);
+}
+
 nav .container {
   padding: 30px 0px;
 }
@@ -335,26 +355,6 @@ nav .container .nav_icons button:nth-child(2):hover {
   padding-bottom: 50px;
 }
 
-.section_plans .container .section_plans-title {
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section_plans .container .section_plans-title h1 {
-  font-size: 30px;
-  font-weight: var(--weight-700);
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  color: var(--darken-color);
-}
-
-.section_plans .container .section_plans-title p {
-  font-size: 16px;
-  font-weight: var(--main-weight);
-  letter-spacing: 1px;
-  color: var(--main-word-color);
-}
 
 .section_plans .container .section_plans-cards {
   display: flex;
@@ -365,11 +365,11 @@ nav .container .nav_icons button:nth-child(2):hover {
 }
 
 .section_plans .container .section_plans-cards .section_plans-cards_card {
-  width: 300px;
+  width: 330px;
   border: var(--border-lines);
   border-radius: 10px;
   text-align: center;
-  padding: 30px 0px;
+  padding: 30px 0px 30px 0px;
 }
 
 .section_plans .container .section_plans-cards .section_plans-cards_card:hover {
@@ -382,8 +382,160 @@ nav .container .nav_icons button:nth-child(2):hover {
 } */
 
 .section_plans .container .section_plans-cards .section_plans-cards_card h3 {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: var(--weight-700);
   letter-spacing: 1px;
   padding: 20px 0px;
 }
+
+.section_plans .container .section_plans-cards_card-types {
+  height: 330px;
+}
+
+.section_plans .container .section_plans-cards_card-types li {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: var(--main-weight);
+  color: var(--main-word-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.section_plans .container .section_plans-cards_card-types li i {
+  color: var(--green);
+}
+
+.section_plans .container .section_plans-cards_card-types li:hover {
+  color: var(--red-color);
+}
+
+.section_plans .container .section_plans-cards_card-types li::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: var(--red-blur-10);
+  z-index: -1;
+  border-radius: 10px;
+  transition: 0.4s cubic-bezier(0.4, 1, 0.5, 1);
+}
+
+.section_plans .container .section_plans-cards_card-types li:hover::after {
+  width: 100%;
+}
+
+.section_plans .container .section_plans-cards .section_plans-cards_card h2 {
+  font-size: 25px;
+  font-weight: var(--weight-500);
+  letter-spacing: 1px;
+  color: var(--darken-color);
+  padding-bottom: 10px;
+}
+
+.section_plans
+  .container
+  .section_plans-cards
+  .section_plans-cards_card
+  h2
+  span {
+  font-weight: var(--main-weight);
+}
+
+.section_plans
+  .container
+  .section_plans-cards
+  .section_plans-cards_card
+  button {
+  border: 2px solid var(--red-color);
+  border-radius: 100px;
+  background-color: transparent;
+  padding: 10px 60px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red-color);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.section_plans
+  .container
+  .section_plans-cards
+  .section_plans-cards_card
+  button:hover {
+  background-color: var(--red-color);
+  color: var(--main-bg-color);
+  box-shadow: 0px 10px 10px 2px var(--red-blur-10);
+}
+
+.section_network .container {
+  padding: 70px 0px 20px 0px;
+}
+
+
+.section_network .container #map-container {
+  height: 600px;
+  min-width: 310px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.section_network .container .loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
+}
+
+.section_network .container .section_network-socials {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding: 25px 0px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section_network
+  .container
+  .section_network-socials
+  .section_network-socials_card {
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+
+.section_network
+  .container
+  .section_network-socials
+  .section_network-socials_card
+  svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section_network
+  .container
+  .section_network-socials
+  .section_network-socials_card:hover {
+  background-color: var(--border-color);
+  fill: white;
+}
+
+.section_network
+  .container
+  .section_network-socials
+  .section_network-socials_card:hover
+  .map-rect {
+  fill: white;
+}
+
